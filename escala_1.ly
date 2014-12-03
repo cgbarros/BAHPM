@@ -18,7 +18,14 @@ compassoItemA = \time 3/8
 
 % Inserir item A (renomear variável para o nome do exemplo)
 
-musicaItemA = \relative c' { \partial 8 c8 }
+musicaItemA = \relative c' { 
+  \partial 8 c8 |
+  d4 c8 |
+  g'8 f e |
+  f4 e8 |
+  d8 a b |
+  c4.
+}
 
 
 
