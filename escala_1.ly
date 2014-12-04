@@ -1,22 +1,27 @@
 \version "2.18.2"
 
-%%%%%%%%%%
-% ITEM A %
-%%%%%%%%%%
+\include "lilypond-book-preamble.ly"
 
-% Inserir nome do instrumento
+%{
+BAHPM
+Bateria de Avaliação da Habilidade de Percepção Musical
+Item (número):
+Igual ou diferente:
+%}
+
+%%%%%%%%%%%%%
+% SUBITEM A %
+%%%%%%%%%%%%%
+
+% Informações antes da música
+% Inserir nome do instrumento, andamento, compasso, clave
 
 instrumentoNomeItemA = \set Staff.instrumentName ="Piano"
-
-% inserir andamento
-
 andamentoItemA = \tempo  4 = 60
-
-% inserir fórmula de compasso
-
 compassoItemA = \time 3/8
+clefItemA = \clef treble
 
-% Inserir item A (renomear variável para o nome do exemplo)
+% Inserir música do item A
 
 musicaItemA = \relative c' { 
   \partial 8 c8 |
@@ -29,40 +34,26 @@ musicaItemA = \relative c' {
 
 
 
-%%%%%%%%%%
-% ITEM B %
-%%%%%%%%%%
+%%%%%%%%%%%%%
+% SUBITEM B %
+%%%%%%%%%%%%%
 
-% Inserir nome do instrumento
+% Caso o exemplo seja igual, manter essa seção comentada
+% Cada elemento possui um comentário anterior a ele para
+% que seja removido somente o elemento diferenciado
 
-instrumentoNomeItemB = \instrumentoNomeItemA
+% Informações antes da música
+% Inserir nome do instrumento, andamento, compasso, clave
 
-% inserir andamento
+% instrumentoNomeItemB =
+% andamentoItemB = 
+% compassoItemB = 
 
-andamentoItemB = \andamentoItemA
+% Música do Item B
 
-% inserir fórmula de compasso
+% musicaItemB = \musicaItemA
 
-compassoItemB = \compassoItemA
-
-% Inserir item B
-
-musicaItemB = \musicaItemA
-
-% Configurações para silêncio entre exemplos
-
-%{
-silencio = \relative c' {  
-    \stopStaff
-    \once \override Staff.TimeSignature.stencil = ##f
-    \time 4/4
-    \once \override Rest.stencil = #ly:text-interface::print
-    \once \override Rest.text = #(markup "(2s)" )
-    f1\rest
-    \startStaff
-}
-%}
-
+\book {
 \score {
 \new Staff <<
   \instrumentoNomeItemA
@@ -73,7 +64,11 @@ silencio = \relative c' {
   }
 >>
 }
+}
 
+%{
+
+\book {
 \score {
 \new Staff <<
   \instrumentoNomeItemB
@@ -84,3 +79,6 @@ silencio = \relative c' {
   }
 >>
 }
+}
+
+%}

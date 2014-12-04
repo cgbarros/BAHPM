@@ -1,14 +1,78 @@
 \version "2.18.2"
 
-% Inserir música (renomear variável para o nome do exemplo)
+\include "lilypond-book-preamble.ly"
 
-musica = \relative c' {  }
+%{
+BAHPM
+Bateria de Avaliação da Habilidade de Percepção Musical
+Item (número):
+Igual ou diferente:
+%}
 
-% Inserir nome do instrumento
+%%%%%%%%%%%%%
+% SUBITEM A %
+%%%%%%%%%%%%%
 
-instrumentName = \set Staff.instrumentName =""
+% Informações antes da música
+% Inserir nome do instrumento, andamento, compasso, clave
 
-\new Staff <<
-  \instrumentName
-  \new Voice { \musica  }
->>
+instrumentoNomeItemA = \set Staff.instrumentName =""
+andamentoItemA = \tempo  
+compassoItemA = \time 
+clefItemA = \clef 
+
+% Inserir música do item A
+
+musicaItemA = \relative c' { 
+  
+}
+
+
+
+%%%%%%%%%%%%%
+% SUBITEM B %
+%%%%%%%%%%%%%
+
+% Caso o exemplo seja igual, manter essa seção comentada
+% Cada elemento possui um comentário anterior a ele para
+% que seja removido somente o elemento diferenciado
+
+% Informações antes da música
+% Inserir nome do instrumento, andamento, compasso, clave
+
+% instrumentoNomeItemB =
+% andamentoItemB = 
+% compassoItemB = 
+
+% Música do Item B
+
+% musicaItemB = \musicaItemA
+
+\book {
+  \score {
+    \new Staff <<
+      \instrumentoNomeItemA
+      \andamentoItemA
+      \compassoItemA
+      \new Voice { 
+        \musicaItemA
+      }
+    >>
+  }
+}
+
+
+%{
+\book{
+  \score {
+    \new Staff <<
+      \instrumentoNomeItemB
+      \andamentoItemB
+      \compassoItemB
+      \new Voice { 
+        \musicaItemB
+      }
+    >>
+  }
+}
+%}
