@@ -48,31 +48,28 @@ musicaItemA = \relative c' {
 
 % musicaItemB = \musicaItemA
 
-\book {
-  \score {
-    \new Staff <<
-      \instrumentoNomeItemA
-      \andamentoItemA
-      \compassoItemA
-      \new Voice { 
-        \musicaItemA
-      }
-    >>
-  }
+
+\score {
+  \new Staff <<
+    \instrumentoNomeItemA
+    \andamentoItemA
+    \compassoItemA
+    \new Voice { 
+      \musicaItemA
+    }
+  >>
 }
 
 
 %{
-\book{
-  \score {
-    \new Staff <<
-      \instrumentoNomeItemB
-      \andamentoItemB
-      \compassoItemB
-      \new Voice { 
-        \musicaItemB
-      }
-    >>
-  }
+\score {
+  \new Staff <<
+    \instrumentoNomeItemB
+    \andamentoItemB
+    \compassoItemB
+    \new Voice { 
+      \musicaItemB
+    }
+  >>
 }
 %}

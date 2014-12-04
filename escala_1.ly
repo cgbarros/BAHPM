@@ -53,7 +53,6 @@ musicaItemA = \relative c' {
 
 % musicaItemB = \musicaItemA
 
-\book {
 \score {
 \new Staff <<
   \instrumentoNomeItemA
@@ -64,12 +63,10 @@ musicaItemA = \relative c' {
   }
 >>
 }
-}
 
 %{
 
-\book {
-\score {
+score {
 \new Staff <<
   \instrumentoNomeItemB
   \andamentoItemB
@@ -78,7 +75,6 @@ musicaItemA = \relative c' {
     \musicaItemB
   }
 >>
-}
 }
 
 %}
