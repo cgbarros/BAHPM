@@ -2,6 +2,11 @@
 
 \include "lilypond-book-preamble.ly"
 
+\paper {
+ ragged-right = ##f 
+ line-width = 110\mm
+}
+
 %{
 BAHPM
 Bateria de Avaliação da Habilidade de Percepção Musical
@@ -16,21 +21,22 @@ Igual ou diferente:
 % Informações antes da música
 % Inserir nome do instrumento, andamento, compasso, clave
 
-instrumentoNomeItemA = \set Staff.instrumentName ="Piano"
-andamentoItemA = \tempo  4 = 60
-compassoItemA = \time 3/8
+instrumentoNomeItemA = \set Staff.instrumentName ="Violino"
+andamentoItemA = \tempo 8 = 210
+compassoItemA = \time 5/8
 clefItemA = \clef treble
 
 % Inserir música do item A
 
+diferente = { a' }
+
 musicaItemA = \relative c' { 
-  \partial 8 c8 |
-  d4 c8 |
-  g'8 f e |
-  f4 e8 |
-  d8 a b |
-  c4.
+  f4 d8 b' a |
+  e4 c'8 b a |
+  f4 g8 b e, |
+  f2 ~ f8 \bar "|."
 }
+
 
 
 
@@ -45,36 +51,20 @@ musicaItemA = \relative c' {
 % Informações antes da música
 % Inserir nome do instrumento, andamento, compasso, clave
 
-% instrumentoNomeItemB =
-% andamentoItemB = 
-% compassoItemB = 
+instrumentoNomeItemB = \instrumentoNomeItemA
+andamentoItemB = \andamentoItemA
+compassoItemB = \compassoItemA
 
 % Música do Item B
 
-% musicaItemB = \musicaItemA
-
-\score {
-\new Staff <<
-  \instrumentoNomeItemA
-  \andamentoItemA
-  \compassoItemA
-  \new Voice { 
-    \musicaItemA
-  }
->>
+musicaItemB = \relative c' { 
+  f4 d8 b' a |
+  e4 c'8 b aes-+ |
+  f4 g8 b e, |
+  f2 ~ f8 \bar "|."
 }
 
-%{
 
-score {
-\new Staff <<
-  \instrumentoNomeItemB
-  \andamentoItemB
-  \compassoItemB
-  \new Voice { 
-    \musicaItemB
-  }
->>
-}
+\include "templateA.ly"
 
-%}
+\include "templateB.ly"

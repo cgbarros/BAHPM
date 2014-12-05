@@ -16,15 +16,20 @@ Igual ou diferente:
 % Informações antes da música
 % Inserir nome do instrumento, andamento, compasso, clave
 
-instrumentoNomeItemA = \set Staff.instrumentName =""
-andamentoItemA = \tempo  
-compassoItemA = \time 
-clefItemA = \clef 
+instrumentoNomeItemA = \set Staff.instrumentName ="Piano"
+andamentoItemA = \tempo  4. = 60
+compassoItemA = \time 3/8
+clefItemA = \clef treble
 
 % Inserir música do item A
 
 musicaItemA = \relative c' { 
-  
+  \partial 8 c8 |
+  d4 c8 |
+  g'8 f e |
+  f4 e8 |
+  d8 a b |
+  c4. \bar "|."
 }
 
 
@@ -40,36 +45,14 @@ musicaItemA = \relative c' {
 % Informações antes da música
 % Inserir nome do instrumento, andamento, compasso, clave
 
-% instrumentoNomeItemB =
-% andamentoItemB = 
-% compassoItemB = 
+instrumentoNomeItemB = \instrumentoNomeItemA
+andamentoItemB = \andamentoItemA
+compassoItemB = \compassoItemA
 
 % Música do Item B
 
 % musicaItemB = \musicaItemA
 
+\include "templateA.ly"
 
-\score {
-  \new Staff <<
-    \instrumentoNomeItemA
-    \andamentoItemA
-    \compassoItemA
-    \new Voice { 
-      \musicaItemA
-    }
-  >>
-}
-
-
-%{
-\score {
-  \new Staff <<
-    \instrumentoNomeItemB
-    \andamentoItemB
-    \compassoItemB
-    \new Voice { 
-      \musicaItemB
-    }
-  >>
-}
-%}
+%\include "templateB.ly"
