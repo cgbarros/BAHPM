@@ -3,50 +3,9 @@
 %{
 BAHPM
 Bateria de Avaliação da Habilidade de Percepção Musical
-Item:
-Igual ou diferente:
+Item: 01_escala
+Igual ou diferente: Igual
 %}
-
-%%% INFORMACOES PRE-MUSICA %%%
-
-%%%%%%%%%%%%%
-% SUBITEM A %
-%%%%%%%%%%%%%
-
-
-% Inserir nome do instrumento, andamento, compasso, clave
-
-instrumentoNomeItemA = \set Staff.instrumentName = ""
-andamentoItemA = \tempo 
-compassoItemA = \time 
-clefItemA = \clef 
-keyItemA = \key
-
-%%%%%%%%%%%%%
-% SUBITEM B %
-%%%%%%%%%%%%%
-
-% Caso o exemplo seja igual, manter essa seção comentada
-% Cada elemento possui um comentário anterior a ele para
-% que seja removido somente o elemento diferenciado
-
-% Inserir nome do instrumento, andamento, compasso, clave
-
-instrumentoNomeItemB = \instrumentoNomeItemA
-andamentoItemB = \andamentoItemA
-compassoItemB = \compassoItemA
-clefItemB = \clefItemA
-keyItemB = \keyItemA
-
-%%%%%%%%%%
-% MUSICA %
-%%%%%%%%%%
-
-musica = \relative c' {
- \tag #'itemA { }
- \tag #'itemB { }
- \bar "|."
-}
 
 %%% Configuração de layout %%%
 
@@ -59,15 +18,50 @@ musica = \relative c' {
 % line-width = 110\mm
 }
 
-%%% CONTEXTOS PARA CADA SUBITEM %%%
+musica = \relative c' { 
+  \partial 8 c8 |
+  d4 c8 |
+  g'8 f e |
+  f4 e8 |
+  d8 a b |
+  c4. \bar "|."
+  \tag #'itemA { }
+  \tag #'itemB { }
+}
+
+
+%%%%%%%%%%%%%
+% SUBITEM A %
+%%%%%%%%%%%%%
+
+% Informações antes da música
+% Inserir nome do instrumento, andamento, compasso, clave
+
+instrumentoNomeItemA = \set Staff.instrumentName ="Piano"
+andamentoItemA = \tempo  4. = 60
+compassoItemA = \time 3/8
+clefItemA = \clef treble
+
+%%%%%%%%%%%%%
+% SUBITEM B %
+%%%%%%%%%%%%%
+
+% Caso o exemplo seja igual, manter essa seção comentada
+% Cada elemento possui um comentário anterior a ele para
+% que seja removido somente o elemento diferenciado
+
+% Informações antes da música
+% Inserir nome do instrumento, andamento, compasso, clave
+
+instrumentoNomeItemB = \instrumentoNomeItemA
+andamentoItemB = \andamentoItemA
+compassoItemB = \compassoItemA
 
 itemA = \score {
   \new Staff <<
     \instrumentoNomeItemA
     \andamentoItemA
     \compassoItemA
-    \clefItemA
-    \keyItemA
     \new Voice { 
       \keepWithTag #'itemA \musica
     }
@@ -79,14 +73,11 @@ itemB = \score {
     \instrumentoNomeItemB
     \andamentoItemB
     \compassoItemB
-    \clefItemB
-    \keyItemB
     \new Voice { 
       \keepWithTag #'itemB \musica
     }
   >>
 }
-
 
 
 \itemA

@@ -1,0 +1,2 @@
+@image{05_escala_igual-1}
+@c eof
