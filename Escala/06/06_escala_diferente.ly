@@ -3,8 +3,8 @@
 %{
 BAHPM
 Bateria de Avaliação da Habilidade de Percepção Musical
-Item:
-Igual ou diferente:
+Item: 06_escala
+Igual ou diferente: diferente
 %}
 
 %%% INFORMACOES PRE-MUSICA %%%
@@ -16,11 +16,11 @@ Igual ou diferente:
 
 % Inserir nome do instrumento, andamento, compasso, clave
 
-instrumentoNomeItemA = \set Staff.instrumentName = ""
-andamentoItemA = \tempo 
-compassoItemA = \time 
-clefItemA = \clef 
-keyItemA = \key
+instrumentoNomeItemA = \set Staff.instrumentName = "Violino"
+andamentoItemA = \tempo 2. = 60
+compassoItemA = \time 3/4
+clefItemA = \clef treble
+keyItemA = \key bes \major
 
 %%%%%%%%%%%%%
 % SUBITEM B %
@@ -36,9 +36,15 @@ keyItemB = \keyItemA
 % MUSICA %
 %%%%%%%%%%
 
-musica = \relative c' {
- \tag #'itemA { }
- \tag #'itemB { }
+musica = \relative c'' {
+  bes2. |
+  a8 g 
+ \tag #'itemA { f }
+ \tag #'itemB { e-+ }
+ bes' c d |
+ ees2. |
+ f8 ees d c bes a |
+ bes2.
  \bar "|."
 }
 
@@ -49,8 +55,8 @@ musica = \relative c' {
 % desmarcar os itens abaixo para regular alinhamento de itens
 
 \paper {
-% ragged-right = ##f 
-% line-width = 110\mm
+ ragged-right = ##f 
+ line-width = 110\mm
 }
 
 %%% CONTEXTOS PARA CADA SUBITEM %%%
@@ -87,4 +93,4 @@ itemB = \score {
 
 % Desmarcar para incluir o subitem B
 
-%\itemB
+\itemB

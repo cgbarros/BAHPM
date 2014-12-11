@@ -16,11 +16,11 @@ Igual ou diferente:
 
 % Inserir nome do instrumento, andamento, compasso, clave
 
-instrumentoNomeItemA = \set Staff.instrumentName = ""
-andamentoItemA = \tempo 
-compassoItemA = \time 
-clefItemA = \clef 
-keyItemA = \key
+instrumentoNomeItemA = \set Staff.instrumentName = "Flauta"
+andamentoItemA = \tempo 4 = 85
+compassoItemA = \time 3/4
+clefItemA = \clef treble
+keyItemA = \key c \major
 
 %%%%%%%%%%%%%
 % SUBITEM B %
@@ -36,9 +36,13 @@ keyItemB = \keyItemA
 % MUSICA %
 %%%%%%%%%%
 
-musica = \relative c' {
- \tag #'itemA { }
- \tag #'itemB { }
+musica = \relative c'' {
+  a8 g a4. f8 |
+  d8 d' 
+ \tag #'itemA { c4. }
+ \tag #'itemB { bes4.-+ }
+ a8 |
+ g a d,2
  \bar "|."
 }
 
@@ -49,8 +53,8 @@ musica = \relative c' {
 % desmarcar os itens abaixo para regular alinhamento de itens
 
 \paper {
-% ragged-right = ##f 
-% line-width = 110\mm
+ ragged-right = ##f 
+ line-width = 110\mm
 }
 
 %%% CONTEXTOS PARA CADA SUBITEM %%%
@@ -87,4 +91,4 @@ itemB = \score {
 
 % Desmarcar para incluir o subitem B
 
-%\itemB
+\itemB

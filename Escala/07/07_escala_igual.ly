@@ -3,8 +3,8 @@
 %{
 BAHPM
 Bateria de Avaliação da Habilidade de Percepção Musical
-Item:
-Igual ou diferente:
+Item: 07_escala
+Igual ou diferente: igual
 %}
 
 %%% INFORMACOES PRE-MUSICA %%%
@@ -16,11 +16,11 @@ Igual ou diferente:
 
 % Inserir nome do instrumento, andamento, compasso, clave
 
-instrumentoNomeItemA = \set Staff.instrumentName = ""
-andamentoItemA = \tempo 
-compassoItemA = \time 
-clefItemA = \clef 
-keyItemA = \key
+instrumentoNomeItemA = \set Staff.instrumentName = "Violão"
+andamentoItemA = \tempo 4 = 60
+compassoItemA = \time 8/4
+clefItemA = \clef "G_8"
+keyItemA = \key b \minor
 
 %%%%%%%%%%%%%
 % SUBITEM B %
@@ -36,7 +36,12 @@ keyItemB = \keyItemA
 % MUSICA %
 %%%%%%%%%%
 
-musica = \relative c' {
+musica = \relative c {
+  \override Staff.TimeSignature #'stencil = ##f
+  b4 ~ b16 a'8. r4
+  \tuplet 5/4 { e8 fis8. ~ }
+  fis16 r8 g16 fis16 r 16 d8 ~ 
+  d16 g cis, b ~ b4
  \tag #'itemA { }
  \tag #'itemB { }
  \bar "|."
