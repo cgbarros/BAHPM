@@ -16,7 +16,7 @@ Igual ou diferente: igual
 
 % Inserir nome do instrumento, andamento, compasso, clave
 
-instrumentoNomeItemA = \set Staff.instrumentName = "Violão"
+instrumentoNomeItemA = \set Staff.instrumentName = "Guitar"
 andamentoItemA = \tempo 4 = 70
 compassoItemA = \time 10/4
 clefItemA = \clef "G_8"
