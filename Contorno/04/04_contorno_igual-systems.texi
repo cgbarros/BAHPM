@@ -1,0 +1,2 @@
+@image{04_contorno_igual-1}
+@c eof
