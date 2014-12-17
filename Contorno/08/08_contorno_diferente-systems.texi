@@ -1,0 +1,3 @@
+@image{08_contorno_diferente-1}
+@image{08_contorno_diferente-2}
+@c eof

@@ -1,0 +1,2 @@
+Neste item a pauta tem 6 linhas, cada uma indicando um woodblock de altura diferente.
+Seria essa a melhor notação mesmo nesse caso?
