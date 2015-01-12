@@ -1,0 +1,3 @@
+@image{09_dura2_diferente-1}
+@image{09_dura2_diferente-2}
+@c eof
