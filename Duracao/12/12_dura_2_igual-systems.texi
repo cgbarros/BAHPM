@@ -1,0 +1,2 @@
+@image{12_dura_2_igual-1}
+@c eof

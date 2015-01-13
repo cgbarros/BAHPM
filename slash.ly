@@ -1,5 +1,22 @@
 \version "2.18.2"
 
+%% http://lsr.di.unimi.it/LSR/Item?id=721
+%% see also http://lilypond.org/doc/v2.18/Documentation/notation/special-rhythmic-concerns
+%% see also http://lilypond.1069038.n5.nabble.com/LSR-v2-18-quot-Slashed-beamed-grace-notes-quot-enhancement-proposal-tc159585.html
+
+
+%LSR contributed by David Nalesnik (see http://lilypond.1069038.n5.nabble.com/So-slashed-beamed-grace-notes-td152817.html)
+%LSR original contributed by Valentin Villenave 
+
+% The argument `ang' is the amount of slant, expressed in degrees.
+%
+% Stem-fraction is the distance between the point the slash crosses the stem
+% and the notehead-end of the stem.  It is expressed as a number between 0 and 1.
+%
+% The argument `protrusion' is the extra distance the slash
+% extends beyond its intersection with stem and beam
+
+
 slash =
 #(define-music-function (parser location ang stem-fraction protrusion)
    (number? number? number?)
