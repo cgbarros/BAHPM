@@ -3,8 +3,8 @@
 %{
 BAHPM
 Bateria de Avaliação da Habilidade de Percepção Musical
-Item:
-Igual ou diferente:
+Item: 15_duracao
+Igual ou diferente: diferente
 %}
 
 %%% INFORMACOES PRE-MUSICA %%%
@@ -16,11 +16,11 @@ Igual ou diferente:
 
 % Inserir nome do instrumento, andamento, compasso, clave
 
-instrumentoNomeItemA = \set Staff.instrumentName = ""
-andamentoItemA = \tempo 
-compassoItemA = \time 
-clefItemA = \clef 
-keyItemA = \key
+instrumentoNomeItemA = \set Staff.instrumentName = "Flute"
+andamentoItemA = \tempo 4 = 70
+compassoItemA = \time 9/8
+clefItemA = \clef treble
+keyItemA = \key b \major
 
 %%%%%%%%%%%%%
 % SUBITEM B %
@@ -28,7 +28,7 @@ keyItemA = \key
 
 instrumentoNomeItemB = \instrumentoNomeItemA
 andamentoItemB = \andamentoItemA
-compassoItemB = \compassoItemA
+compassoItemB = \time 4/4
 clefItemB = \clefItemA
 keyItemB = \keyItemA
 
@@ -36,12 +36,15 @@ keyItemB = \keyItemA
 % MUSICA %
 %%%%%%%%%%
 
-musica = \relative c' {
-% desmarcar as configurções abaixo para itens sem barra de compasso
-% \override Staff.TimeSignature #'stencil = ##f
-% \accidentalStyle Score.neo-modern
- \tag #'itemA { }
- \tag #'itemB { }
+musica = \relative c'' {
+ \override Staff.TimeSignature #'stencil = ##f
+ \accidentalStyle Score.neo-modern
+% \override Staff.StaffSymbol.line-count = #1
+ b8[ dis]
+ \tag #'itemA { fis32[ e ~ e8.] ~ e8 }
+ \tag #'itemB { fis8 e }
+ \tuplet 3/2 { dis8[ cis b] ~ }
+ b4
  \bar "|."
 }
 
@@ -52,8 +55,8 @@ musica = \relative c' {
 % desmarcar os itens abaixo para regular alinhamento de itens
 
 \paper {
-% ragged-right = ##f 
-% line-width = 110\mm
+ ragged-right = ##f 
+ line-width = 110\mm
 }
 
 %%% CONTEXTOS PARA CADA SUBITEM %%%
@@ -90,4 +93,4 @@ itemB = \score {
 
 % Desmarcar para incluir o subitem B
 
-%\itemB
+\itemB
