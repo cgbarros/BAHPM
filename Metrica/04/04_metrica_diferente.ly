@@ -3,8 +3,8 @@
 %{
 BAHPM
 Bateria de Avaliação da Habilidade de Percepção Musical
-Item:
-Igual ou diferente:
+Item: 04_metrica
+Igual ou diferente: diferente
 %}
 
 %%% INFORMACOES PRE-MUSICA %%%
@@ -16,11 +16,11 @@ Igual ou diferente:
 
 % Inserir nome do instrumento, andamento, compasso, clave
 
-instrumentoNomeItemA = \set Staff.instrumentName = ""
-andamentoItemA = \tempo 
-compassoItemA = \time 
-clefItemA = \clef 
-keyItemA = \key 
+instrumentoNomeItemA = \set Staff.instrumentName = "Piano"
+andamentoItemA = \tempo 4 = 90
+compassoItemA = \time 4/4
+clefItemA = \clef treble
+keyItemA = \key c \major
 
 %%%%%%%%%%%%%
 % SUBITEM B %
@@ -28,7 +28,7 @@ keyItemA = \key
 
 instrumentoNomeItemB = \instrumentoNomeItemA
 andamentoItemB = \andamentoItemA
-compassoItemB = \compassoItemA
+compassoItemB = \time 3/4
 clefItemB = \clefItemA
 keyItemB = \keyItemA 
 
@@ -41,27 +41,29 @@ keyItemB = \keyItemA
 \layout {
   \context {
     \Score
-% \override TimeSignature #'stencil = ##f 		% Sem fórmla de compasso
-% \accidentalStyle Score.neo-modern			% Acidente apenas para as notas
-% \override StaffSymbol.line-count = #1			% Número de linhas na pauta
-%  \override SpacingSpanner.uniform-stretching = ##t	% Notação proporcional
-%  \override SpacingSpanner.strict-note-spacing = ##t
-%  proportionalNotationDuration = #(ly:make-moment 1/20)
+% \override TimeSignature #'stencil = ##f
+% \accidentalStyle Score.neo-modern
+% \override StaffSymbol.line-count = #1
+% \override SpacingSpanner.uniform-stretching = ##t
+% \override SpacingSpanner.strict-note-spacing = ##t
+  proportionalNotationDuration = #(ly:make-moment 1/14)
   }
 }
 
 \paper {
 % ragged-right = ##f 
-% line-width = 110\mm
+% line-width = 250\mm
 }
 
 %%%%%%%%%%
 % MUSICA %
 %%%%%%%%%%
 
-musica = \relative c' {
- \tag #'itemA { }
- \tag #'itemB { }
+musica = \relative c'' {
+  g4 bes b8. cis16
+ \tag #'itemA { b8 d f,4. aes8 }
+ \tag #'itemB { b4 d f,8. aes16 }
+ g4 cis b d f,8. g16 b4
  \bar "|."
 }
 
@@ -100,4 +102,4 @@ itemB = \score {
 
 % Desmarcar para incluir o subitem B
 
-% \itemB
+\itemB

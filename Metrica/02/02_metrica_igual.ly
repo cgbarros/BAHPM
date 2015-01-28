@@ -3,8 +3,8 @@
 %{
 BAHPM
 Bateria de Avaliação da Habilidade de Percepção Musical
-Item:
-Igual ou diferente:
+Item: 02_metrica
+Igual ou diferente: igual
 %}
 
 %%% INFORMACOES PRE-MUSICA %%%
@@ -16,11 +16,11 @@ Igual ou diferente:
 
 % Inserir nome do instrumento, andamento, compasso, clave
 
-instrumentoNomeItemA = \set Staff.instrumentName = ""
-andamentoItemA = \tempo 
-compassoItemA = \time 
-clefItemA = \clef 
-keyItemA = \key 
+instrumentoNomeItemA = \set Staff.instrumentName = "Bass drum"
+andamentoItemA = \tempo 4 = 110
+compassoItemA = \time 2/4
+clefItemA = \clef percussion
+keyItemA = \key c \major
 
 %%%%%%%%%%%%%
 % SUBITEM B %
@@ -36,23 +36,17 @@ keyItemB = \keyItemA
 % LAYOUT %
 %%%%%%%%%%
 
-\include "lilypond-book-preamble.ly"
-
 \layout {
   \context {
     \Score
-% \override TimeSignature #'stencil = ##f 		% Sem fórmla de compasso
-% \accidentalStyle Score.neo-modern			% Acidente apenas para as notas
-% \override StaffSymbol.line-count = #1			% Número de linhas na pauta
-%  \override SpacingSpanner.uniform-stretching = ##t	% Notação proporcional
-%  \override SpacingSpanner.strict-note-spacing = ##t
-%  proportionalNotationDuration = #(ly:make-moment 1/20)
+% \override TimeSignature #'stencil = ##f
+% \accidentalStyle Score.neo-modern
+ \override StaffSymbol.line-count = #1
+%{  \override SpacingSpanner.uniform-stretching = ##t
+  \override SpacingSpanner.strict-note-spacing = ##t
+  proportionalNotationDuration = #(ly:make-moment 1/20)
+%}
   }
-}
-
-\paper {
-% ragged-right = ##f 
-% line-width = 110\mm
 }
 
 %%%%%%%%%%
@@ -60,11 +54,25 @@ keyItemB = \keyItemA
 %%%%%%%%%%
 
 musica = \relative c' {
+  \partial 4 c8. c16 |
+  c4-> c |
+  c8-> c c8. c16 |
+  c4-> c
  \tag #'itemA { }
  \tag #'itemB { }
  \bar "|."
 }
 
+%%% Configuração de layout %%%
+
+\include "lilypond-book-preamble.ly"
+
+% desmarcar os itens abaixo para regular alinhamento de itens
+
+\paper {
+% ragged-right = ##f 
+% line-width = 110\mm
+}
 
 %%% CONTEXTOS PARA CADA SUBITEM %%%
 
