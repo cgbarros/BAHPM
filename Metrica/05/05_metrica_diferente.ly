@@ -3,7 +3,7 @@
 %{
 BAHPM
 Bateria de Avaliação da Habilidade de Percepção Musical
-Item: 05_contorno
+Item: 05_metrica
 Igual ou diferente: diferente
 %}
 
@@ -16,9 +16,9 @@ Igual ou diferente: diferente
 
 % Inserir nome do instrumento, andamento, compasso, clave
 
-instrumentoNomeItemA = \set Staff.instrumentName = "6 Woodblocks"
-andamentoItemA = \tempo 4 = 120
-compassoItemA = \time 47/32
+instrumentoNomeItemA = \set Staff.instrumentName = "Cow bell"
+andamentoItemA = \tempo 4 = 160
+compassoItemA = \time 4/4
 clefItemA = \clef percussion
 keyItemA = \key c \major
 
@@ -28,36 +28,47 @@ keyItemA = \key c \major
 
 instrumentoNomeItemB = \instrumentoNomeItemA
 andamentoItemB = \andamentoItemA
-compassoItemB = \compassoItemA
+compassoItemB = \time 3/4
 clefItemB = \clefItemA
-keyItemB = \keyItemA
+keyItemB = \keyItemA 
+
+%%%%%%%%%%
+% LAYOUT %
+%%%%%%%%%%
+
+\include "lilypond-book-preamble.ly"
+
+\layout {
+  \context {
+    \Score
+% \override TimeSignature #'stencil = ##f 		% Sem fórmla de compasso
+% \accidentalStyle Score.neo-modern			% Acidente apenas para as notas
+ \override StaffSymbol.line-count = #1			% Número de linhas na pauta
+ \override SpacingSpanner.uniform-stretching = ##t	% Notação proporcional
+ \override SpacingSpanner.strict-note-spacing = ##t
+%  proportionalNotationDuration = #(ly:make-moment 1/20)
+  }
+}
+
+\paper {
+ ragged-right = ##f 
+ line-width = 110\mm
+}
 
 %%%%%%%%%%
 % MUSICA %
 %%%%%%%%%%
 
 musica = \relative c' {
-% desmarcar as configurções abaixo para itens sem barra de compasso
- \override Staff.TimeSignature #'stencil = ##f
-% \accidentalStyle Score.neo-modern
- \override Staff.StaffSymbol.line-positions = #'(-5 -3 -1 1 3 5)
- f32[ d b g] e[ g d' b] a'4:32 f4:32 d8[ b]
- \tag #'itemA { f'8[ }
- \tag #'itemB { a8[ -+ }
- b,8]  e,[ g32 b a']
+ \tag #'itemA { 
+   \repeat unfold 3 { b d d d }
+ }
+ \tag #'itemB { 
+   \repeat unfold 4 { b d d }
+ }
  \bar "|."
 }
 
-%%% Configuração de layout %%%
-
-\include "lilypond-book-preamble.ly"
-
-% desmarcar os itens abaixo para regular alinhamento de itens
-
-\paper {
-% ragged-right = ##f 
-% line-width = 110\mm
-}
 
 %%% CONTEXTOS PARA CADA SUBITEM %%%
 

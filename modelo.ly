@@ -44,9 +44,10 @@ keyItemB = \keyItemA
 % \override TimeSignature #'stencil = ##f 		% Sem fórmla de compasso
 % \accidentalStyle Score.neo-modern			% Acidente apenas para as notas
 % \override StaffSymbol.line-count = #1			% Número de linhas na pauta
-%  \override SpacingSpanner.uniform-stretching = ##t	% Notação proporcional
-%  \override SpacingSpanner.strict-note-spacing = ##t
-%  proportionalNotationDuration = #(ly:make-moment 1/20)
+% \override Staff.StaffSymbol.line-positions = #'(-1 0 1)
+% \override SpacingSpanner.uniform-stretching = ##t	% Notação proporcional
+% \override SpacingSpanner.strict-note-spacing = ##t
+% proportionalNotationDuration = #(ly:make-moment 1/20)
   }
 }
 
