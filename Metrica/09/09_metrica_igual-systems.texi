@@ -1,0 +1,2 @@
+@image{09_metrica_igual-1}
+@c eof
