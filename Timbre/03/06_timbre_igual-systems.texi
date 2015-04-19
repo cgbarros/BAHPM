@@ -1,0 +1,2 @@
+@image{06_timbre_igual-1}
+@c eof
