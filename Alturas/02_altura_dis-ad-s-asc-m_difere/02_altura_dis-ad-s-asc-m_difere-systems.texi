@@ -1,0 +1,3 @@
+@image{02_altura_dis-ad-s-asc-m_difere-1}
+@image{02_altura_dis-ad-s-asc-m_difere-2}
+@c eof

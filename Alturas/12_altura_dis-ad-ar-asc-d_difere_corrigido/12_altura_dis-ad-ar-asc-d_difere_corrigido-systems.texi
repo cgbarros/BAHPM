@@ -1,0 +1,3 @@
+@image{12_altura_dis-ad-ar-asc-d_difere_corrigido-1}
+@image{12_altura_dis-ad-ar-asc-d_difere_corrigido-2}
+@c eof
