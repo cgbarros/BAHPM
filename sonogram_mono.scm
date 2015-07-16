@@ -13,11 +13,9 @@
 (set! (html-dir) ".")
 (set! (spectrum-end) 0.10)
 ;(set! (eps-file) "10_timbre_igual-sonogram.eps")
-;(set! (transform-graph? 0 1) #t)
-;(set! (time-graph? 0 1) #f)
 (set! (transform-graph? 0 0) #t)
 (set! (time-graph? 0 0) #f)
 (set! (x-zoom-slider 0 0) 100)
-(set! (x-zoom-slider 0 1) 100)
+;(set! (min-dB 0 0) -14)
 
 ; end of snd options

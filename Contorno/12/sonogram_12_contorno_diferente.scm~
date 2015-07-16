@@ -1,0 +1,21 @@
+; Snd 15.2 (11-Dec-14) options saved Ter 21-Abr-2015 22:58 BRT
+(set! (window-width) 800)
+(set! (window-height) 350)
+(set! (transform-size) 8192)
+(set! (fft-window) blackman10-window)
+(set! (transform-graph-type) graph-as-sonogram)
+(set! (colormap) gray-colormap)
+(set! (fft-log-magnitude) #t)
+(set! (show-listener) #f)
+;(set! (fft-log-frequency) #t)
+(set! (listener-font) "Monospace 11")
+(set! (save-state-file) "saved-snd.scm")
+(set! (html-dir) ".")
+(set! (spectrum-end) 0.10)
+;(set! (eps-file) "10_timbre_igual-sonogram.eps")
+(set! (transform-graph? 0 0) #t)
+(set! (time-graph? 0 0) #f)
+(set! (x-zoom-slider 0 0) 100)
+;(set! (min-dB 0 0) -14)
+
+; end of snd options
