@@ -36,7 +36,7 @@ keyItemB = \keyItemA
 % LAYOUT %
 %%%%%%%%%%
 
-\include "lilypond-book-preamble.ly"
+% \include "lilypond-book-preamble.ly"
 
 \layout {
   \context {
