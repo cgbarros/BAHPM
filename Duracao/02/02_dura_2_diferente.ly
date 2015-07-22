@@ -36,6 +36,8 @@ keyItemB = \keyItemA
 % MUSICA %
 %%%%%%%%%%
 
+\include "../../difSpanner.ly"
+
 musica = \relative c' {
 % desmarcar as configurções abaixo para itens sem barra de compasso
 % \override Staff.TimeSignature #'stencil = ##f
@@ -43,7 +45,7 @@ musica = \relative c' {
  \override Staff.StaffSymbol.line-count = #1
  c8. c16 c8
  \tag #'itemA { c8. c16 c8 }
- \tag #'itemB { c8-+ c16 c8. }
+ \tag #'itemB { \difSpanner c8\startTextSpan c16 c8.\stopTextSpan }
  c4.
  \bar "|."
 }
