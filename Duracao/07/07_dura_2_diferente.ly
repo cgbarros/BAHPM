@@ -36,7 +36,7 @@ keyItemB = \keyItemA
 % MUSICA %
 %%%%%%%%%%
 
-\include "..\..\slash.ly"
+\include "../../slash.ly"
 
 musica = \relative c' {
  \override Staff.TimeSignature #'stencil = ##f

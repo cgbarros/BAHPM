@@ -52,10 +52,13 @@ keyItemB = \keyItemA
 % MUSICA %
 %%%%%%%%%%
 
+\include "../../difSpanner.ly"
+
 musica = \relative c' {
+  \difSpanner
  d4 b b
  \tag #'itemA { d b b | d b b }
- \tag #'itemB { \time 2/4 d b | d b | b b }
+ \tag #'itemB { \time 2/4 d\startTextSpan b | d b\stopTextSpan | b b }
  \bar "|."
 }
 

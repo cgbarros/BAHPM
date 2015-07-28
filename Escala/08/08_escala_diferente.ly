@@ -42,7 +42,7 @@ musica = \relative c'' {
  ees4 des |
  c8 bes aes ges |
  \tag #'itemA { f2 }
- \tag #'itemB { fes2 }
+ \tag #'itemB { fes2-+ }
  \bar "|."
 }
 

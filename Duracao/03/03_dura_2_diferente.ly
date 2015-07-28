@@ -36,19 +36,32 @@ keyItemB = \keyItemA
 % MUSICA %
 %%%%%%%%%%
 
+\include "../../difSpanner.ly"
+
 musica = \relative c' {
- \override Staff.TimeSignature #'stencil = ##f
-% \accidentalStyle Score.neo-modern
- \override Staff.StaffSymbol.line-count = #1
+  \difSpanner
  c16[ c c c] c16[ c] r8
  \tag #'itemA { c8[ c] }
- \tag #'itemB { c16[-+ c] }
+ \tag #'itemB { c16[\startTextSpan c]\stopTextSpan }
  \bar "|."
 }
 
 %%% Configuração de layout %%%
 
 \include "lilypond-book-preamble.ly"
+
+\layout {
+  \context {
+    \Score
+ \override TimeSignature #'stencil = ##f 		% Sem fórmla de compasso
+% \accidentalStyle Score.neo-modern			% Acidente apenas para as notas
+ \override StaffSymbol.line-count = #1			% Número de linhas na pauta
+% \override Staff.StaffSymbol.line-positions = #'(-1 0 1)
+% \override SpacingSpanner.uniform-stretching = ##t	% Notação proporcional
+% \override SpacingSpanner.strict-note-spacing = ##t
+ proportionalNotationDuration = #(ly:make-moment 1/20)
+  }
+}
 
 % desmarcar os itens abaixo para regular alinhamento de itens
 

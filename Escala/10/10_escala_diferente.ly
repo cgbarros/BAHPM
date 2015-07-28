@@ -3,8 +3,8 @@
 %{
 BAHPM
 Bateria de Avaliação da Habilidade de Percepção Musical
-Item:
-Igual ou diferente:
+Item: 10_escala
+Igual ou diferente: diferentes
 %}
 
 %%% INFORMACOES PRE-MUSICA %%%

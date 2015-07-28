@@ -36,13 +36,16 @@ keyItemB = \keyItemA
 % MUSICA %
 %%%%%%%%%%
 
+\include "../../difSpanner.ly"
+
 musica = \relative c'' {
+  \difSpanner
  \override Staff.TimeSignature #'stencil = ##f
  \accidentalStyle Score.neo-modern
 % \override Staff.StaffSymbol.line-count = #1
  b8[ dis]
  \tag #'itemA { fis32[ e ~ e8.] ~ e8 }
- \tag #'itemB { fis8 e }
+ \tag #'itemB { fis8\startTextSpan e\stopTextSpan }
  \tuplet 3/2 { dis8[ cis b] ~ }
  b4
  \bar "|."

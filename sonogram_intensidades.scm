@@ -6,6 +6,6 @@
 (set! (html-dir) ".")
 ;(set! (eps-file) "10_timbre_igual-sonogram.eps")
 (set! (x-zoom-slider 0 0) 100)
-(set! (graph-style 0 0) graph-filled)
+;(set! (graph-style 0 0) graph-filled)
 
 ; end of snd options

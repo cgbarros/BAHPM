@@ -60,16 +60,19 @@ keyItemB = \keyItemA
 % MUSICA %
 %%%%%%%%%%
 
+\include "../../difSpanner.ly"
+
 musica = \relative c {
+  \difSpanner
   c4 c
  \tag #'itemA { d4 d8 }
- \tag #'itemB { d8. d16 }
+ \tag #'itemB { d8.\startTextSpan d16\stopTextSpan }
  g4 g
  \tag #'itemA { f8[ ees d] }
- \tag #'itemB { \tuplet 3/2 { f ees d } }
+ \tag #'itemB { \tuplet 3/2 { f\startTextSpan ees d\stopTextSpan } }
  ees4 ees
  \tag #'itemA { d8[ aes' g] | bes2.. }
- \tag #'itemB { \tuplet 3/2 { d,8 aes' g } | bes2. }
+ \tag #'itemB { \tuplet 3/2 { d,8\startTextSpan aes' g } | bes2.\stopTextSpan }
  \bar "|."
 }
 
