@@ -61,7 +61,7 @@ keyItemB = \keyItemA
 
 \paper {
   % ragged-right = ##f 
-  % line-width = 120\mm
+   line-width = 140\mm
 }
 
 %%%%%%%%%%
@@ -118,7 +118,8 @@ itemB = \score {
 
 
 \itemA
+\markup { \fill-line { \null "(2nd time Cymbal solo)" } }
 
 % Desmarcar para incluir o subitem B
 
-\itemB
+% \itemB
