@@ -1,0 +1,80 @@
+01_contorno_diferente.wav -
+01_dura_2_igual.wav -
+01_escala_igual.wav -
+01_metrica_diferente.wav -
+02_altura_dis-ad-s-asc-m_difere.wav -
+02_contorno_igual.wav -
+02_duracao_ad-cl-m_difere_corrigido.wav
+02_dura_2_diferente.wav -
+02_escala_diferente.wav
+02_metrica_igual.wav
+02_timbre_diferente.wav
+03_contorno_diferente.wav
+03_duracao_ad-cl-d_difere.wav
+03_dura_2_diferente.wav
+03_escala_diferente.wav
+03_inten_dis-ad-sus-fp-d_difere.wav
+03_metrica_igual.wav
+04_contorno_igual.wav
+04_dura_2_igual.wav
+04_escala_diferente.wav
+04_inten_dis-ad-sus-pf-f_difere.wav
+04_metrica_diferente.wav
+04_timbre_diferente.wav
+05_contorno_diferente.wav
+05_dura_2_diferente.wav
+05_escala_igual.wav
+05_metrica_diferente.wav
+06_contorno_diferente.wav
+06_dura_2_igual.wav
+06_escala_diferente.wav
+06_metrica_igual.wav
+06_timbre_ai-ar_ai-s_difere.wav
+06_timbre_igual.wav
+07_contorno_diferente.wav
+07_dura_2_diferente.wav
+07_escala_igual.wav
+07_metrica_diferente.wav
+07_timbre_ad-s_ai_ar_difere.wav
+07_timbre_diferente.wav
+08_contorno_diferente.wav
+08_duracao_ad-fix-m_igual.wav
+08_dura_2_diferente.wav
+08_escala_diferente.wav
+08_metrica_igual.wav
+08_timbre_ai-s_ai-ar_difere.wav
+08_timbre_igual.wav
+09_contorno_igual.wav
+09_dura_2_diferente.wav
+09_escala_igual.wav
+09_metrica_igual.wav
+09_timbre_diferente.wav
+10_contorno_igual.wav
+10_duracso_ai-cl-f_difere.wav
+10_dura_2_igual.wav
+10_escala_diferente.wav
+10_metrica_diferente.wav
+10_timbre_igual.wav
+11_contorno_diferente.wav
+11_dura_2_igual.wav
+11_escala_igual.wav
+12_altura_dis-ad-ar-asc-d_difere.wav
+12_contorno_diferente.wav
+12_dura_2_igual.wav
+12_escala_diferente.wav
+13_contorno_igual.wav
+13_dura_2_diferente.wav
+13_escala_diferente.wav
+14_dura_2_igual.wav
+14_escala_diferente.wav
+15_dura_2_diferente.wav
+15_escala_diferente.wav
+16_timbre_diferente.wav
+18_duracao_ai-fix-l_igual.wav
+21_timbre_diferente.wav
+23_inten_dis-ai-sus-pf-m_difere.wav
+26_altura_dis-ai-s-fix-m_igual.wav
+31_altura_dis-ai-ar-des-f_difere.wav
+31_inten_dis-ai-ar-pf-f_difere.wav
+33_altura_dis-ai-ar-des-d_dife.wav
+33_inten_dis-ai-ar-pf-d_difere.wav
