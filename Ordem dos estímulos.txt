@@ -4,18 +4,18 @@
 01_metrica_diferente.wav -
 02_altura_dis-ad-s-asc-m_difere.wav -
 02_contorno_igual.wav -
-02_duracao_ad-cl-m_difere_corrigido.wav
+02_duracao_ad-cl-m_difere_corrigido.wav *
 02_dura_2_diferente.wav -
-02_escala_diferente.wav
-02_metrica_igual.wav
-02_timbre_diferente.wav
-03_contorno_diferente.wav
-03_duracao_ad-cl-d_difere.wav
-03_dura_2_diferente.wav
-03_escala_diferente.wav
-03_inten_dis-ad-sus-fp-d_difere.wav
-03_metrica_igual.wav
-04_contorno_igual.wav
+02_escala_diferente.wav -
+02_metrica_igual.wav -
+02_timbre_diferente.wav -
+03_contorno_diferente.wav -
+03_duracao_ad-cl-d_difere.wav -
+03_dura_2_diferente.wav -
+03_escala_diferente.wav -
+03_inten_dis-ad-sus-fp-d_difere.wav -
+03_metrica_igual.wav -
+04_contorno_igual.wav -
 04_dura_2_igual.wav
 04_escala_diferente.wav
 04_inten_dis-ad-sus-pf-f_difere.wav
